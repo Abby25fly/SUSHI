@@ -25,3 +25,19 @@ export const addDishes = (index) => {
         }
     }
 };
+
+export const removeDish = (index) =>{
+    const oldList = store.getState().shopDishes.filter((item, idx) => idx !== index);
+
+    store.setState({
+        shopDishes: oldList
+    })
+    console.log(oldList);
+}
+    
+export const deleteAll = () => {
+    console.log('borrame')
+	 store.setState({
+		shopDishes: []
+	})
+}

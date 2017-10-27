@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './header.css';
 
-const Header = () => {
+const Header = ({shopDishes}) => {
 	return (
 		<div id='header'>
 			<h1 className='logo sushi-logo'>
@@ -9,7 +9,7 @@ const Header = () => {
 			</h1>
 			<a id='cart-info'>Shopping cart
 				<span> 
-					<span>1</span> items
+					<span>{shopDishes.length}</span> items
 				</span>
 			</a>
 		</div>

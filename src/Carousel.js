@@ -8,7 +8,7 @@ import ShoppingCart from './shoppingCart';
 import Footer from './footer';
 import {addDishes} from './actions'
 
-const InfoDish = ({ image, name, description, price, nutritional, nutritionalInfo, index }) => {
+const InfoDish = ({ image, name, description, price, nutritional, nutritionalInfo, selectedFood }) => {
 	return (
 		<div
 			className="carousel-inner text-center"
@@ -30,6 +30,7 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 							<button
 								className="btn btn-danger pull-right"
 								href="/article/show/sed-vel-lectus/9"
+								onClick={() => addDishes(selectedFood)}
 								>
 								<i className="fa fa-long-arrow-right">
 									+ADD TO CART
@@ -74,6 +75,7 @@ const Carousel = ({ dishes, selectedFood }) => {
 							description={dishes[selectedFood].description}
 							nutritional={dishes[selectedFood].nutritional}
 							nutritionalInfo={dishes[selectedFood].nutritionalInfo}
+							selectedFood={[selectedFood]}
 						/>
 						<a
 							className="left carousel-control next1"

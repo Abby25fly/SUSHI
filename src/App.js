@@ -13,7 +13,7 @@ const App = ({dishes, shopDishes}) => {
     <div id='application' >
       <div>
         <div id='wrapper'>
-          <Header />
+          <Header shopDishes={shopDishes}/>
           <div id='main-section'>
             <ShoppingCart shopDishes={shopDishes} />
             <Home dishes={dishes} />
